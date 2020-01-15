@@ -1,11 +1,11 @@
 colisoes:
 
-if GetSpriteCollision(jogador, meteoro1)
-	gameOver()
-elseif	GetSpriteCollision(jogador, meteoro2)
-	gameOver()
-elseif	GetSpriteCollision(jogador, meteoro3)
-	gameOver()
+if GetSpriteCollision(nave, meteoro1)
+	//gameOver()
+elseif	GetSpriteCollision(nave, meteoro2)
+	//gameOver()
+elseif	GetSpriteCollision(nave, meteoro3)
+	//gameOver()
 endif
 
 function gameOver()

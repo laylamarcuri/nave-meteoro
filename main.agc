@@ -1,12 +1,12 @@
 
-// Project: JogoProjeto 
+// Project: Invasão Meteoro 
 // Created: 2019-12-03
 
 // show all errors
 SetErrorMode(2)
 
 // set window properties
-SetWindowTitle( "JogoProjeto" )
+SetWindowTitle( "Invasão Meteoro" )
 SetWindowSize( 768, 1024, 0 )
 SetWindowAllowResize( 1 ) // allow the user to resize the window
 
@@ -18,33 +18,25 @@ SetScissor( 0,0,0,0 ) // use the maximum available screen space, no black border
 UseNewDefaultFonts( 1 ) // since version 2.0.22 we can use nicer default fonts
 
 #include "loader.agc"
-#include "movimento.agc"
-#include "movimento meteoro.agc"
+#include "nave.agc"
+#include "meteoro.agc"
 #include "colisoes.agc"
 
 
-sx as integer
-sx = 324
-
-//GetSpriteCollision 
-
 Gosub loader
 
-global ym1 =-100
-global xm1 = 500
 
-global ym2 =-400
-global xm2 = 100
-
-global ym3 =-1000
-global xm3 = 250
 
 do
-	Gosub movimento
+	Gosub movimentoNave
 	Gosub movimentoMeteoro
 	gosub colisoes
 	
-	Print(GetSpriteX(jogador))
+	Print(GetSpriteX(nave))
+	Print("NAVE_X: "+str(GetSpriteX(nave))+" "+"NAVE_Y: "+str(GetSpriteY(nave)))
+	Print("METEORO_1_X: "+str(GetSpriteX(meteoro1))+" "+"METEORO_1_Y: "+str(GetSpriteY(meteoro1)))
+	Print("METEORO_2_X: "+str(GetSpriteX(meteoro2))+" "+"METEORO_2_Y: "+str(GetSpriteY(meteoro2)))
+	Print("METEORO_3_X: "+str(GetSpriteX(meteoro3))+" "+"METEORO_3_Y: "+str(GetSpriteY(meteoro3)))
 
 	
     Sync()
