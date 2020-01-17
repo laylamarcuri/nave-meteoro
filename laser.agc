@@ -3,7 +3,7 @@ global laserID as integer []
 laser:
 	
 	//verifica todas as posiçoes do array laserID e incrementa a velocidade
-	Print(laserID.length)
+	Print("laserID.length :"+str(laserID.length))
 	if(laserID.length > -1)	
 		for i = 0 to laserID.length
 			SetSpritePosition(laserID[i], GetSpriteX(laserID[i]), GetSpriteY(laserID[i])-30)
