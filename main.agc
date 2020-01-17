@@ -23,6 +23,8 @@ UseNewDefaultFonts( 1 ) // since version 2.0.22 we can use nicer default fonts
 #include "colisoes.agc"
 #include "laser.agc"
 
+global vida as integer = 2
+
 Gosub loader
 
 do
@@ -32,12 +34,9 @@ do
 	gosub colisoes
 	gosub laser
 	
-	//Print(GetSpriteX(nave))
+	Print("vida : "+ str(vida+1))
 	//Print("NAVE_X: "+str(GetSpriteX(nave))+" "+"NAVE_Y: "+str(GetSpriteY(nave)))
-	//Print("METEORO_1_X: "+str(GetSpriteX(meteoro1))+" "+"METEORO_1_Y: "+str(GetSpriteY(meteoro1)))
-	//Print("METEORO_2_X: "+str(GetSpriteX(meteoro2))+" "+"METEORO_2_Y: "+str(GetSpriteY(meteoro2)))
-	//Print("METEORO_3_X: "+str(GetSpriteX(meteoro3))+" "+"METEORO_3_Y: "+str(GetSpriteY(meteoro3)))
-	//Print("LASER_X: "+str(GetSpriteX(laser))+" "+"LASER_Y: "+str(GetSpriteY(laser)))
+
 
     Sync()
 loop

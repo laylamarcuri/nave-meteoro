@@ -17,7 +17,6 @@ movimentoNave:
 		naveX = 15
 	endif
 	
-	
 	naveX = naveX + GetJoystickX()*15
 
 return

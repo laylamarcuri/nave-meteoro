@@ -1,12 +1,17 @@
 colisoes:
 
-//~ if GetSpriteCollision(nave, meteoro1)
-	//~ gameOver()
-//~ elseif	GetSpriteCollision(nave, meteoro2)
-	//~ gameOver()
-//~ elseif	GetSpriteCollision(nave, meteoro3)
-	//~ gameOver()
-//~ endif
+
+for j=0 to meteoroID.length
+	if GetSpriteCollision(nave, meteoroID[j])
+		SetSpritePosition(meteoroID[j],Random(15, 650), Random2(-100, -500*i+1) )
+		if (vida = 0)
+			gameOver()
+		else
+			vida = vida -1
+		endif
+	endif
+next j
+
 
 function gameOver()
 	go = LoadImage("gameOver.jpg")

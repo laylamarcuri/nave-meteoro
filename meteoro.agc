@@ -1,4 +1,4 @@
-global meteoros as integer = 50
+global meteoros as integer = 15
 global meteoroID as integer[]
 
 movimentoMeteoro:
