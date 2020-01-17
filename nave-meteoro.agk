@@ -55,6 +55,7 @@ FILE_1=loader.agc;-1
 FILE_2=nave.agc;-1
 FILE_3=meteoro.agc;-1
 FILE_4=colisoes.agc;-1
+FILE_5=laser.agc;-1
 
 [files]
 

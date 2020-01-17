@@ -8,10 +8,11 @@ movimentoNave:
 
 	SetSpritePosition(nave, naveX, naveY)
 
+	//controla para a nave não atravesar para o lado direito
 	if GetSpriteX(nave) > 650
 		naveX = 650 
 	endif
-
+	//controla para a nave não atravesar para o lado esquerdo
 	if GetSpriteX(nave) < 15
 		naveX = 15
 	endif
