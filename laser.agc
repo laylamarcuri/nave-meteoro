@@ -13,7 +13,7 @@ laser:
 //cria uma sprite da imagem do laser quando clica e coloca na ultima posiçao do array
 	if (GetPointerPressed()=1)
 		laserID.insert(CreateSprite(laser))
-		SetSpritePosition(laserID[laserID.length] , GetSpriteX(nave)+47, GetSpriteY(nave)-15)
+		SetSpritePosition(laserID[laserID.length] , GetSpriteX(nave)+47, GetSpriteY(nave)-25)
     endif
 	
 return

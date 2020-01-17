@@ -10,12 +10,11 @@ loader:
 	SetSpritePosition(nave, 324, 910)
 	
 	meteoro = LoadImage("meteoro.gif")
-	//~ meteoro2 = CreateSprite(LoadImage("meteoro.gif"))
-	//~ meteoro3 = CreateSprite(LoadImage("meteoro.gif"))
-	//~ 
-	//~ SetSpritePosition(meteoro1, Random(15, 650), Random2(-100, -500) )
-	//~ SetSpritePosition(meteoro2, Random(15, 650), Random2(-200, -800) )
-	//~ SetSpritePosition(meteoro3, Random(15, 650), Random2(-500, -1000) )
+	//só, cria meteoros
+	for i=0 to meteoros
+		meteoroID.insert(CreateSprite(meteoro))
+		SetSpritePosition(meteoroID[i], Random(15, 650), Random2(-100, -500*i+1) )
+	next i
 	
 	laser = LoadImage("laser.png")
 
