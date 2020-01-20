@@ -1,7 +1,4 @@
-//posisao de X da nave
-global naveX as integer
-global naveY = 910 //valor fixo, para a nave nao subir
-naveX = 324
+
 
 movimentoNave:
 

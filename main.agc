@@ -23,7 +23,7 @@ UseNewDefaultFonts( 1 ) // since version 2.0.22 we can use nicer default fonts
 #include "colisoes.agc"
 #include "laser.agc"
 
-global vida as integer = 2
+
 
 Gosub loader
 
@@ -36,6 +36,9 @@ do
 	
 	Print("vida : "+ str(vida+1))
 	//Print("NAVE_X: "+str(GetSpriteX(nave))+" "+"NAVE_Y: "+str(GetSpriteY(nave)))
+	Print("laserID.length :"+str(laserID.length))
+	Print("meteoroID.length :"+str(meteoroID.length))
+	Print("laser_posicao :"+str(laser_posicao))
 
 
     Sync()
