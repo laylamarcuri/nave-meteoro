@@ -13,7 +13,7 @@ global naveX as integer = 324
 global naveY = 910 //valor fixo, para a nave nao subir
 
 
-global vida as integer = 4
+global vida as integer = 10
 
 //##############################
 
