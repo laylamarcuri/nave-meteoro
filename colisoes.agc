@@ -35,10 +35,21 @@ endFunction
 	//verifica se o laser acertou o meteoro
 for i = 0 to laserID.length
 	for j=0 to meteoroID.length
-		
+
 		if GetSpriteCollision(laserID[i], meteoroID[j])
+			
+			//ESPLOSAO METEORO
+			img_explosaoMeteoro = LoadImage("explosaoMeteoro.png")
+			explosaoMeteoro = CreateSprite(img_explosaoMeteoro)
+			SetSpritePosition(explosaoMeteoro, GetSpriteX(meteoroID[j]), GetSpriteY(meteoroID[j]))
+			SetSpriteAnimation (explosaoMeteoro, 52, 54 , 7)
+			PlaySprite(explosaoMeteoro, 6, 0, 1, 7)
+			//SOM DA EXPLOSAO
+			PlayMusicOGG(LoadMusicOGG("explodeMeteoro_07.ogg"))
+			SetMusicSystemVolumeOGG(10)
+		
 			SetSpritePosition(meteoroID[j],Random(15, 650), Random2(-100, -500) )
-				SetSpritePosition(laserID[i], -100,-10000)
+			SetSpritePosition(laserID[i], -100,-10000)
 		endif
 		
 	next j
