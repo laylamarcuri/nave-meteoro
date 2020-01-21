@@ -38,6 +38,8 @@ for i = 0 to laserID.length
 
 		if GetSpriteCollision(laserID[i], meteoroID[j])
 			
+			pontos = pontos + 10
+			
 			//ESPLOSAO METEORO
 			img_explosaoMeteoro = LoadImage("explosaoMeteoro.png")
 			explosaoMeteoro = CreateSprite(img_explosaoMeteoro)
