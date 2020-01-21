@@ -34,7 +34,8 @@ do
 	gosub colisoes
 	gosub laser
 	
-	Print("vida : "+ str(vida+1))
+	Print("VIDA : "+ str(vida+1))
+	Print("PONTOS : "+ str(pontos))
 	//Print("NAVE_X: "+str(GetSpriteX(nave))+" "+"NAVE_Y: "+str(GetSpriteY(nave)))
 	Print("laserID.length :"+str(laserID.length))
 	Print("meteoroID.length :"+str(meteoroID.length))
