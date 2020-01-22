@@ -18,21 +18,14 @@ SetScissor( 0,0,0,0 ) // use the maximum available screen space, no black border
 UseNewDefaultFonts( 1 ) // since version 2.0.22 we can use nicer default fonts
 
 #include "loader.agc"
-#include "nave.agc"
-#include "meteoro.agc"
-#include "colisoes.agc"
-#include "laser.agc"
-
+#include "jogo.agc"
 
 
 Gosub loader
 
 do
 
-	Gosub movimentoNave
-	Gosub movimentoMeteoro
-	gosub colisoes
-	gosub laser
+	Gosub jogo
 	
 	Print("VIDA : "+ str(vida+1))
 	Print("PONTOS : "+ str(pontos))
