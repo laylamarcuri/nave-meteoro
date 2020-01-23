@@ -1,23 +1,4 @@
-loader:
-
-//########## VARIAVEIS ##########
-global qtd_meteoros as integer = 6
-global meteoroID as integer[]
-global contTempo = 0
-
-global qtd_laser as integer = 10
-global laserID as integer []
-global laser_posicao = -1
-
-//posisao de X da nave
-global naveX as integer = 324
-global naveY = 910 //valor fixo, para a nave nao subir
-
-
-global vida as integer = 4
-global pontos as integer = 0
-
-//##############################
+loader_jogo:
 
 	fundo = LoadImage("fundo.png")
 	fundo = CreateSprite(fundo)
@@ -55,5 +36,19 @@ global pontos as integer = 0
 			SetSpritePosition(laserID[i], -100,-10000)
 		next i
 	endif
+	
+
+return
+
+
+loader_main:
+
+	img_ButtonJogar = LoadImage("jogar.png")
+	buttonJogar = CreateSprite(img_ButtonJogar)
+	SetSpritePosition(buttonJogar, 240, 200)
+	
+	img_ButtonSair = LoadImage("sair.png")
+	buttonSair = CreateSprite(img_ButtonSair)
+	SetSpritePosition(buttonSair, 240, 300)
 
 return

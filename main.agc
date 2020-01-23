@@ -20,12 +20,24 @@ UseNewDefaultFonts( 1 ) // since version 2.0.22 we can use nicer default fonts
 #include "loader.agc"
 #include "jogo.agc"
 
+main:
 
-Gosub loader
+Gosub loader_main
 
 do
 
-	Gosub jogo
+
+	
+	//IR PARA O JOGO		
+	if GetSpriteHitTest(buttonJogar,GetPointerX(),GetPointerY()) = 1 and GetPointerPressed() = 1
+		DeleteAllSprites()
+		Gosub jogo
+    endif  
+    
+    //FECHA A JANELA OU SAIR DO APP
+    if GetSpriteHitTest(buttonSair,GetPointerX(),GetPointerY()) = 1 and GetPointerPressed() = 1
+		end
+    endif
 	
 	Print("VIDA : "+ str(vida+1))
 	Print("PONTOS : "+ str(pontos))
@@ -37,3 +49,5 @@ do
 
     Sync()
 loop
+
+return
